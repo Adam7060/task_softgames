@@ -33,7 +33,8 @@ class Cards extends Container {
     for (let i: number = 0; i < 144; i++) {
       if (index > 53) index = 0;
       let sprite = new Sprite(sheet.textures!["card_spritesheet-" + index + ".png"]);
-      sprite.position.set(100, 100);
+      // keep some random distance between the cards
+      sprite.position.set(100 + Math.floor(-25 + Math.random() * 25), 100 + + Math.floor(-10 + Math.random() * 10));
       this.deck.push(sprite);
       this.stageContent.addChild(sprite);
       index++;
@@ -52,7 +53,7 @@ class Cards extends Container {
   startMoving(): void {
     if (this.deck.length > 0) {
       const sprite = this.deck.pop();
-      gsap.to(sprite!, {x: 500, duration: 2, ease: 'linear'});
+      gsap.to(sprite!, {x: sprite!.x + 400, duration: 2, ease: 'linear'});
       this.stageContent.addChild(sprite!);
     }
   }
