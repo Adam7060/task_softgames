@@ -21,7 +21,7 @@ module.exports = {
     extensions: ['.ts', '.js'],
   },
   devServer:{
-    static: "./"
+    static: "./",
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };

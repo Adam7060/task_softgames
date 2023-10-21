@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@pixi/particle-emitter": "^5.0.8",
     "@types/pixi.js": "^5.0.0",
-    "pixi.js": "^7.3.1",
+    "gsap": "^3.12.2",
+    "pixi.js": "^6.5.7",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
